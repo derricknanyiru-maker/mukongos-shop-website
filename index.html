@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="description" content="Mukongo's Electrical & Electronics Shop in Chavakali, Kenya. Electrical supplies, electronics, installation and troubleshooting services.">
+  <title>Mukongo's Electrical & Electronics Shop</title>
+  <style>
+    :root{--red:#b91c1c;--red-dark:#7f1d1d;--ink:#111827;--muted:#64748b;--pale:#fff7f7;--line:#e5e7eb;--white:#fff;--green:#15803d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:#111827;color:#e5e7eb;font-size:.88rem;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.4px;line-height:1.15}
+    .brand-mark{width:44px;height:44px;border-radius:12px;background:var(--red);display:grid;place-items:center;color:white;font-size:1.45rem;box-shadow:0 7px 18px #b91c1c33}
+    .brand small{display:block;color:var(--muted);font-size:.72rem;font-weight:600;letter-spacing:.4px;margin-top:4px}
+    nav{display:flex;align-items:center;gap:24px;font-size:.94rem;font-weight:700}
+    nav a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--red);color:#fff;box-shadow:0 7px 18px #b91c1c2b}
+    .btn-primary:hover{background:var(--red-dark);transform:translateY(-1px)}
+    .btn-outline{border:1px solid #fecaca;background:white;color:var(--red)}
+    .btn-outline:hover{background:var(--pale)}
+    .hero{background:radial-gradient(circle at 85% 25%,#fee2e2 0,transparent 28%),linear-gradient(135deg,#fff7f7,#fff 58%);padding:76px 0 66px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:48px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--red);font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:1.3px}
+    h1{font-size:clamp(2.45rem,5vw,4.35rem);line-height:1.06;letter-spacing:-2.3px;margin:17px 0}
+    h1 span{color:var(--red)}
+    .hero p{font-size:1.1rem;color:#475569;max-width:570px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px;color:#475569;font-size:.9rem;font-weight:700}
+    .trust span{display:flex;align-items:center;gap:7px}
+    .hero-art{position:relative;min-height:360px;display:grid;place-items:center}
+    .art-panel{width:min(100%,440px);aspect-ratio:1/1;border-radius:30px;background:linear-gradient(145deg,#991b1b,#dc2626);padding:25px;box-shadow:0 25px 60px #7f1d1d30;position:relative;overflow:hidden;color:white}
+    .art-panel:before,.art-panel:after{content:"";position:absolute;border:1px solid #ffffff2c;border-radius:50%;width:330px;height:330px;right:-110px;top:-100px}
+    .art-panel:after{width:240px;height:240px;right:-60px;top:-55px}
+    .art-title{font-size:1rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;position:relative;z-index:1}
+    .art-icons{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px;position:relative;z-index:1}
+    .art-icon{background:#ffffff18;border:1px solid #ffffff35;border-radius:18px;padding:19px 14px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between}
+    .art-icon b{font-size:2.2rem;line-height:1}
+    .art-icon span{font-size:.92rem;font-weight:700}
+    .floating-note{position:absolute;right:-5px;bottom:16px;background:white;border:1px solid var(--line);padding:14px 17px;border-radius:15px;box-shadow:0 12px 30px #11182714;font-weight:800}
+    .floating-note small{display:block;color:var(--muted);font-weight:600}
+    section{padding:74px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 38px}
+    .section-head .eyebrow{justify-content:center}
+    h2{font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-1px;line-height:1.15;margin:12px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border:1px solid var(--line);border-radius:18px;padding:25px;background:white;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px #0f172a0d;border-color:#fecaca}
+    .card-icon{width:52px;height:52px;border-radius:14px;background:var(--pale);display:grid;place-items:center;font-size:1.7rem;margin-bottom:18px}
+    .card h3{margin:0 0 8px;font-size:1.15rem}
+    .card p{color:var(--muted);margin:0;font-size:.96rem}
+    .products{background:#f8fafc}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .product{border:1px solid var(--line);border-radius:16px;background:white;padding:20px;text-align:center}
+    .product-visual{height:100px;border-radius:12px;background:linear-gradient(135deg,#fff1f2,#f8fafc);display:grid;place-items:center;font-size:2.7rem;margin-bottom:16px}
+    .product h3{font-size:1rem;margin:0 0 5px}
+    .product p{font-size:.88rem;color:var(--muted);margin:0}
+    .callout{background:#111827;color:white;border-radius:24px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .callout h2{margin:0 0 8px}
+    .callout p{margin:0;color:#cbd5e1}
+    .callout .btn{white-space:nowrap}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
+    .about-visual{background:var(--pale);border-radius:22px;padding:30px;min-height:280px;display:grid;place-items:center;text-align:center}
+    .about-visual .big{font-size:5rem}
+    .about-visual h3{margin:8px 0 0}
+    .about-copy p{color:var(--muted)}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+    .checklist span{font-weight:700;font-size:.94rem}
+    .checklist span:before{content:"✓";color:var(--green);font-weight:900;margin-right:8px}
+    .contact{background:#f8fafc}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+    .contact-info,.contact-form{background:white;border:1px solid var(--line);border-radius:18px;padding:27px}
+    .contact-info h3,.contact-form h3{margin-top:0}
+    .info-row{display:flex;gap:13px;margin:20px 0;align-items:flex-start}
+    .info-row .mini{background:var(--pale);color:var(--red);width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
+    .info-row small{display:block;color:var(--muted)}
+    label{display:block;font-size:.9rem;font-weight:700;margin:13px 0 6px}
+    input,textarea,select{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:9px;font:inherit;background:white}
+    input:focus,textarea:focus,select:focus{outline:2px solid #fecaca;border-color:var(--red)}
+    textarea{min-height:105px;resize:vertical}
+    .contact-form .btn{margin-top:15px;width:100%}
+    footer{background:#0b1120;color:#cbd5e1;padding:27px 0}
+    footer .container{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:.9rem}
+    footer strong{color:white}
+    .small-note{font-size:.82rem;color:var(--muted);margin-top:10px}
+    .mobile-menu{display:none}
+    @media(max-width:850px){nav{gap:14px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero{padding-top:52px}.hero-art{min-height:320px}.art-panel{max-width:400px}.cards{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.topbar .container{justify-content:center;text-align:center}.nav{flex-wrap:wrap}.brand{font-size:.94rem}.brand-mark{width:39px;height:39px}nav{order:3;width:100%;justify-content:space-between;gap:8px;font-size:.82rem}nav .nav-cta{display:none}.hero{padding:45px 0}.hero-grid{gap:8px}h1{letter-spacing:-1.4px}.hero-art{min-height:290px}.art-panel{padding:18px;border-radius:22px}.art-icon{min-height:100px;padding:14px 10px}.art-icon b{font-size:1.8rem}.floating-note{right:0;bottom:0}.cards{grid-template-columns:1fr}.product-grid{gap:10px}.product{padding:13px}.product-visual{height:82px}section{padding:55px 0}.callout{padding:25px;align-items:flex-start;flex-direction:column}.checklist{grid-template-columns:1fr}.contact-info,.contact-form{padding:21px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>⚡ Electrical supplies • Electronics • Technical services</span><span>📍 Chavakali, Kenya</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Mukongo's shop home"><span class="brand-mark">⚡</span><span>MUKONGO'S<small>ELECTRICAL & ELECTRONICS SHOP</small></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a class="btn btn-primary nav-cta" href="#contact">Get in touch ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">⚡ Powering your everyday</div>
+          <h1>Reliable electrical solutions. <span>Made simple.</span></h1>
+          <p>Your local destination for electrical materials, electronics and practical technical support. Find the supplies you need and get help choosing the right solution for your project.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#products">Explore products ↓</a><a class="btn btn-outline" href="#contact">Ask us a question</a></div>
+          <div class="trust"><span>✓ Helpful service</span><span>✓ Practical solutions</span><span>✓ Everyday essentials</span></div>
+        </div>
+        <div class="hero-art" aria-label="Electrical and electronics product categories">
+          <div class="art-panel">
+            <div class="art-title">Your electrical essentials</div>
+            <div class="art-icons">
+              <div class="art-icon"><b>💡</b><span>Lighting</span></div>
+              <div class="art-icon"><b>🔌</b><span>Wiring & plugs</span></div>
+              <div class="art-icon"><b>🧰</b><span>Tools & testing</span></div>
+              <div class="art-icon"><b>🔋</b><span>Power solutions</span></div>
+            </div>
+          </div>
+          <div class="floating-note">Local technical support<small>Talk to us about your project</small></div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">What we do</div><h2>Services you can count on</h2><p>From choosing supplies to solving everyday electrical challenges, we can help you plan your next project.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">🔧</div><h3>Electrical installation</h3><p>Support for lighting, switches, sockets, wiring accessories and other electrical installation needs.</p></article>
+          <article class="card"><div class="card-icon">🧪</div><h3>Testing & troubleshooting</h3><p>Practical help identifying common electrical and electronics faults and selecting suitable replacement parts.</p></article>
+          <article class="card"><div class="card-icon">💡</div><h3>Lighting solutions</h3><p>Explore bulbs, LED lighting and accessories for homes, shops and other spaces.</p></article>
+          <article class="card"><div class="card-icon">🔋</div><h3>Power & backup</h3><p>Ask about batteries, power accessories and components for backup and small power projects.</p></article>
+          <article class="card"><div class="card-icon">🧰</div><h3>Tools & accessories</h3><p>Everyday tools and testing accessories for technicians, learners and DIY projects.</p></article>
+          <article class="card"><div class="card-icon">🛒</div><h3>Product guidance</h3><p>Tell us what you are working on and get help identifying the right type of product for your needs.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Shop categories</div><h2>Electrical & electronics essentials</h2><p>These are example categories. Contact the shop to confirm current stock, specifications and prices.</p></div>
+        <div class="product-grid">
+          <article class="product"><div class="product-visual">💡</div><h3>Bulbs & lighting</h3><p>LED bulbs, lamps and lighting accessories</p></article>
+          <article class="product"><div class="product-visual">🔌</div><h3>Cables & accessories</h3><p>Wires, plugs, sockets, switches and fittings</p></article>
+          <article class="product"><div class="product-visual">🪛</div><h3>Tools & meters</h3><p>Screwdrivers, pliers and electrical testers</p></article>
+          <article class="product"><div class="product-visual">🔋</div><h3>Power products</h3><p>Batteries, adapters and power accessories</p></article>
+          <article class="product"><div class="product-visual">📹</div><h3>Security equipment</h3><p>CCTV and related installation accessories</p></article>
+          <article class="product"><div class="product-visual">☀️</div><h3>Solar components</h3><p>Ask about solar and backup-power items</p></article>
+          <article class="product"><div class="product-visual">🔊</div><h3>Electronics</h3><p>Selected electronic items and accessories</p></article>
+          <article class="product"><div class="product-visual">⚙️</div><h3>Components</h3><p>Selected parts for repair and projects</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-visual"><div><div class="big">⚡</div><h3>Local service. Practical advice.</h3><p>Electrical & electronics supplies</p></div></div>
+        <div class="about-copy"><div class="eyebrow">About the shop</div><h2>Your partner for everyday electrical needs</h2><p>Mukongo's Electrical & Electronics Shop serves customers looking for electrical supplies, electronics and technical guidance. Whether you are a homeowner, technician, student or contractor, we're here to help you identify the right products for the job.</p><p>Contact us before visiting to check product availability and discuss what you need.</p><div class="checklist"><span>Home and shop projects</span><span>Technicians and learners</span><span>Product selection support</span><span>Electrical essentials</span></div></div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Let's talk</div><h2>How can we help you?</h2><p>Ask about a product, request service information or tell us about your project.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact the shop</h3>
+            <p style="color:#64748b">Replace the sample details below with your real contact information before publishing.</p>
+            <div class="info-row"><div class="mini">📍</div><div><strong>Location</strong><small>Chavakali, Kenya</small></div></div>
+            <div class="info-row"><div class="mini">📞</div><div><strong>Phone / WhatsApp</strong><small>ADD YOUR PHONE NUMBER</small></div></div>
+            <div class="info-row"><div class="mini">🕒</div><div><strong>Opening hours</strong><small>Add your business hours</small></div></div>
+            <div class="info-row"><div class="mini">✉️</div><div><strong>Email</strong><small>ADD YOUR BUSINESS EMAIL (optional)</small></div></div>
+          </div>
+          <form class="contact-form" id="messageForm">
+            <h3>Send an enquiry</h3>
+            <p style="color:#64748b;margin-top:-6px">This form opens WhatsApp with your message after you add your number in the website settings.</p>
+            <label for="customerName">Your name</label><input id="customerName" name="name" placeholder="Enter your name" required>
+            <label for="customerContact">Your phone or email (optional)</label><input id="customerContact" name="contact" placeholder="How can we reach you?">
+            <label for="topic">What do you need?</label><select id="topic" name="topic"><option>Product enquiry</option><option>Electrical service</option><option>Electronics repair / troubleshooting</option><option>Solar or backup power</option><option>Other</option></select>
+            <label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us which product or service you need..." required></textarea>
+            <button class="btn btn-primary" type="submit">Prepare WhatsApp message ↗</button>
+            <div class="small-note" id="formNote">Setup required: add your WhatsApp number in the website code (instructions in README.txt).</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><div><strong>Mukongo's Electrical & Electronics Shop</strong><br><span>Reliable supplies. Practical solutions.</span></div><div>© <span id="year"></span> Mukongo's Shop. All rights reserved.</div></div></footer>
+  <script>
+    // IMPORTANT: Replace the placeholder below with your WhatsApp number in international format.
+    // Kenya example: 2547XXXXXXXX (digits only; no +, spaces, or dashes).
+    const WHATSAPP_NUMBER = "2547XXXXXXXX";
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("messageForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("customerName").value.trim();
+      const contact = document.getElementById("customerContact").value.trim();
+      const topic = document.getElementById("topic").value;
+      const message = document.getElementById("message").value.trim();
+      const text = `Hello Mukongo's Electrical & Electronics Shop.%0AName: ${encodeURIComponent(name)}%0AContact: ${encodeURIComponent(contact || "Not provided")}%0AEnquiry: ${encodeURIComponent(topic)}%0AMessage: ${encodeURIComponent(message)}`;
+      if (WHATSAPP_NUMBER.includes("X")) {
+        alert("Before using the enquiry form, add your real WhatsApp number to the WHATSAPP_NUMBER setting in index.html. See README.txt.");
+        return;
+      }
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
